@@ -4,7 +4,6 @@ import sys, datetime
 from scapy.all import *
 from scapy.error import Scapy_Exception
 m_iface=sys.argv[1]
-filter_message="http"
 count=0
 def pktTCP(pkt):
     global count

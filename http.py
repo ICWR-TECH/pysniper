@@ -11,8 +11,8 @@ def pktTCP(pkt):
 		count=count+1
 		print("[+] Recive Packet\n")
 		paket = pkt.getlayer(Raw).load
-		print(paket)
+		print(paket.decode())
 		f = open("sniff-" + datetime.today().strftime('%Y-%m-%d') + ".txt", "a")
-		f.write(paket)
+		f.write(paket.decode())
 		print("[+] End Of Packet\n")
 sniff(iface=m_iface,prn=pktTCP)
